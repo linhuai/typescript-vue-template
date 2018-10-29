@@ -55,8 +55,12 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true,
-    noInfo: true
+    // historyApiFallback: true,
+    noInfo: false,
+    open: true,
+    contentBase: path.join(__dirname),
+    compress: true,
+    port: 9000
   },
   performance: {
     hints: false
