@@ -1,20 +1,13 @@
 // src/index.ts
 
-import Vue from "vue";
+import Vue from "vue"
+import router from './router'
+import App from './App.vue'
+
 import HelloComponent from "./components/Hello.vue";
 
 let v = new Vue({
   el: "#app",
-  template: `
-  <div>
-      <div>Hello {{name}}!</div>
-      Name: <input v-model="name" type="text">
-      <hello-component :name="name" :initialEnthusiasm="5" />
-  </div>`,
-  data: {
-      name: "World"
-  },
-  components: {
-    HelloComponent
-  }
+  router,
+  render: h => h(App)
 });

@@ -1,14 +1,18 @@
 <template>
   <div>
-    <div>Hello {{name}}!</div>
-    Name: <input v-model="name" type="text">
-    <hello-component :name="name" :initialEnthusiasm="5" />
+    <div>My first CLI</div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    data () {
+      return {
+        name: 'world'
+      }
+    }
   }
 </script>
 
